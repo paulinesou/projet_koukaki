@@ -31,7 +31,11 @@ get_header();
             <article id="characters">
                 <div class="main-character">
                     <h3>Les personnages</h3>
+                    <!-- Insertion de mon template personnage avec le caroussel swiper -->
+                    <?php get_template_part( '/templates/section_personnages' ); ?>
+
                     <?php
+                    /*
                     $main_character = $characters_query->posts[0];
                     echo '<figure>';
                     echo get_the_post_thumbnail( $main_character->ID, 'full' );
@@ -51,6 +55,7 @@ get_header();
                         echo'</figcaption>';
                         echo '</figure>';
                     }
+                    */
                     ?>
                 </div>
             </article>
