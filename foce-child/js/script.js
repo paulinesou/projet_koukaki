@@ -6,37 +6,47 @@ const logo = document.getElementById('logo');
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
-    // logo.style.marginTop = value * 2.5 + 'px';
-    // background.style.top = value * 1 + 'px';
+   //  logo.style.marginTop = value * 1 + 'px';
+   //  background.style.top = value * 1 + 'px';
 });
 
 // Effet apparition au scroll des titre H2
 
 // Mouvement des nuages section lieu
-// let bigCloud = document.getElementById('big_cloud');
-// const littleCloud = document.getElementById('little_cloud');
 
-// window.addEventListener('scroll', () => {
-    
+const bigCloud = document.querySelector('.big_cloud');
+const littleCloud = document.querySelector('.little_cloud');
 
+window.addEventListener('scroll', () => {
 
-// });
+   const {scrollTop, clientHeight} = document.documentElement;
+   const topElementToTopViewport = bigCloud.getBoundingClientRect().top;
+   const mouvLittleCloud = littleCloud.getBoundingClientRect().top;
+
+   if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.50){
+      bigCloud.classList.add("active")
+   }
+
+   if(scrollTop > (scrollTop + mouvLittleCloud).toFixed() - clientHeight * 0.74){
+      littleCloud.classList.add("active")
+   }   
+
+});
 
 // Swiper section personnage 
 
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
+  var swiper = new Swiper('.mySwiper', {
+    pagination: '.swiper-pagination',
+    effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
+    slidesPerView: 'auto',
+    coverflow: {
+ rotate: 20,
+ stretch: 0,
+ depth: 200,
+ modifier: 1,
+ slideShadows: true,
     },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+    loop: true,
+ }) ;

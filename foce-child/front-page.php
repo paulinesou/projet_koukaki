@@ -62,9 +62,10 @@ get_header();
             <article id="place">
                 <div>
                     <h3>Le Lieu</h3>
-                    <img id="big_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?> " alt="image d'un gros nuage">
-                    <img id="little_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?> " alt="image d'un petit nuage">
+                    <img class="big_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?> " alt="image d'un gros nuage">
+                    <img class="little_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?> " alt="image d'un petit nuage">
                     <p><?php echo get_theme_mod('place'); ?></p>
+                    
                 </div>
 
             </article>
