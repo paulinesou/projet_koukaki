@@ -1,0 +1,154 @@
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+
+/* Animation fade in */
+ .banner{
+	position: relative;
+	display: flex;
+	background: white;
+    animation: down 1s;
+
+}
+
+@keyframes down{
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+#background_header{
+	width: 100%;
+	height: 100%;
+}
+
+#logo{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+    animation : up 1s;
+}
+
+#story, #studio{
+    animation: up 1s;
+}
+
+@keyframes up{
+	from {
+		opacity: 0;
+		transform: translate3d(0, 20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/* Animation fleurs */
+.story h2::after{
+    animation: flowerTurn 12s linear infinite;
+    /* transform-origin: ; */
+}
+
+.story__article::after{
+    animation: flowerTurn 12s linear infinite;
+}
+    
+@keyframes flowerTurn {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation titres */
+/* h2{
+	animation: title_animate 1s;
+}
+
+@keyframes title_animate {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 30%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+} */
+
+/* Vidéo hero */
+
+/* Section Lieu */
+.story #place{
+	background-image: url("./assets/images/studio_koukaki_place.png");
+}
+
+#big_cloud{
+	position: absolute;
+	left: 1031px;
+	top: 1330px;
+	animation: cloud_mouv 4s;
+}
+
+#little_cloud{
+	position: absolute;
+	left: 800px;
+	top: 1530px;
+	animation: cloud_mouv 4s;
+}
+
+@keyframes cloud_mouv{
+	0% {
+		transform: translateX(-300px);
+	}
+	100% {
+		transform: translateX(0);
+		}
+	}
+
+/* Section oscars */
+.site-footer::after{
+	bottom: 28.8em;
+}
+
+.site-footer ul::after{
+	bottom: -30.5em;
+}
+
+.site-footer{
+	display: block;
+	overflow: visible;
+	padding-top: 11em;
+}
+
+.site-footer ul{
+	margin-top : 280px;
+}
+
+.oscars{
+	display: flex;
+	justify-content: center;
+}
+
+.oscars h3{
+	background-image: url("./assets/images/rectangle_oscars.png");
+}
+
+.oscars img{
+	object-fit: contain;
+}
