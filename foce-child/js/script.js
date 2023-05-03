@@ -10,9 +10,21 @@ window.addEventListener('scroll', () => {
    //  background.style.top = value * 1 + 'px';
 });
 
-// Effet apparition au scroll des titre H2
+// Apparition des titre h2 au scroll
 
-// Mouvement des nuages section lieu
+const titleMouv = document.querySelector('h2');
+
+window.addEventListener('scroll', () => {
+   
+   const {scrollTop, clientHeight} = document.documentElement;
+   const topElement = titleMouv.getBoundingClientRect().top;
+
+   if(scrollTop > (scrollTop + topElement).toFixed() - clientHeight * 0.50){
+      titleMouv.classList.add("actived")
+   }
+});
+
+// Mouvement des nuages au scroll section lieu
 
 const bigCloud = document.querySelector('.big_cloud');
 const littleCloud = document.querySelector('.little_cloud');

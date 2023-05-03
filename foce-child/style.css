@@ -77,18 +77,12 @@
 
 /* Animation titres */
 /* h2{
-	animation: title_animate 1s;
+	opacity: 0;
 }
 
-@keyframes title_animate {
-	from {
-		opacity: 0;
-		transform: translate3d(0, 30%, 0);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+h2.actived{
+	opacity:1;
+	top: 100px;
 } */
 
 /* Vidéo hero */
@@ -121,12 +115,12 @@
 }
 
 .big_cloud.active {
-    transform: translateX(0%);
+    transform: translateX(100%);
     opacity: 1;
 }
 
 .little_cloud.active {
-    transform: translateX(0%);
+    transform: translateX(170%);
     opacity: 1;
 }
 
