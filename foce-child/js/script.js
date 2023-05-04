@@ -2,27 +2,41 @@
 
 const background = document.getElementById('background_header');
 const logo = document.getElementById('logo');
+const stopLogo = logo.offsetTop;
 
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
-   //  logo.style.marginTop = value * 1 + 'px';
-   //  background.style.top = value * 1 + 'px';
+    background.style.top = value * 2 + 'px';
+    logo.style.marginTop = value * 0.5 + 'px';
+
+   if(scrollTop = (scrollTop + stopLogo).toFixed() - clientHeight * 0.5){
+      logo.style.bottom = value * 0.5 + 'px';
+   }
+
+   if(scrollTop = 100)
 });
 
 // Apparition des titre h2 au scroll
 
-const titleMouv = document.querySelector('h2');
+const ratio = .5
+const options = {
+   root: null,
+   rootMargin:'0px',
+   threshold: ratio
+}
 
-window.addEventListener('scroll', () => {
-   
-   const {scrollTop, clientHeight} = document.documentElement;
-   const topElement = titleMouv.getBoundingClientRect().top;
+const handleIntersect = function (entries, observer) {
+   entries.forEach(function(entry) {
+      if (entry.intersectionRatio > ratio) {
+         entry.target.classList.add("active")
+         observer.unobserve(entry.target)
+      }
+   })
+}
 
-   if(scrollTop > (scrollTop + topElement).toFixed() - clientHeight * 0.50){
-      titleMouv.classList.add("actived")
-   }
-});
+const observeur = new IntersectionObserver(handleIntersect, options)
+observeur.observe(document.querySelector(".title_anim"))
 
 // Mouvement des nuages au scroll section lieu
 
@@ -54,11 +68,12 @@ window.addEventListener('scroll', () => {
     centeredSlides: true,
     slidesPerView: 'auto',
     coverflow: {
- rotate: 20,
+ rotate: 50,
  stretch: 0,
- depth: 200,
+ depth: 100,
  modifier: 1,
- slideShadows: true,
-    },
-    loop: true,
- }) ;
+ slideShadows: false,
+    }
+ });
+
+

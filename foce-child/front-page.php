@@ -6,7 +6,7 @@ get_header();
     <main id="primary" class="site-main">
         <section class="banner">
             <!-- <video id="background_video" autoplay loop muted> 
-                <source src="<?php echo get_stylesheet_directory_uri() . '/assets/images/studio_koukaki_video.mp4'; ?> " type="video/mp4">
+                <source src="<?php echo get_stylesheet_directory_uri() . '/assets/medias/studio_koukaki_video.mp4'; ?> " type="video/mp4">
             </video> -->
             <img id="background_header" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/banner.png'; ?> " alt="fond d'écran chat">
             <div id="logo">
@@ -14,7 +14,8 @@ get_header();
             </div>
         </section>
         <section id="story" class="story">
-            <h2 class="title_anim">L'histoire</h2>
+            <!-- <img class="background_title" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_titre.png'; ?> " alt="fond d'écran bleu des titres"> -->
+            <h2>L'histoire</h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
@@ -30,7 +31,7 @@ get_header();
             ?>
             <article id="characters">
                 <div class="main-character">
-                    <h3>Les personnages</h3>
+                    <h3 class="title_perso">Les personnages</h3>
                     <!-- Insertion de mon template personnage avec le caroussel swiper -->
                     <?php get_template_part( '/templates/section_personnages' ); ?>
 
@@ -74,9 +75,10 @@ get_header();
 
         <section id="studio">
             <h2 class="title_anim">Studio Koukaki</h2>
+            <!-- <img class="background_studio" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_studio.png'; ?> " alt="arrière plan bleu du titre de la section Story"> -->
             <div>
-                <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
-                <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
+                <p>Acteur majeur de l'animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
+                <p>Avec une créativité et une capacité d'innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d'oranger et chats errants”.</p>
             </div>
             </section>
     </main><!-- #main -->
