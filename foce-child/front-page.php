@@ -15,7 +15,7 @@ get_header();
         </section>
         <section id="story" class="story">
             <!-- <img class="background_title" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_titre.png'; ?> " alt="fond d'écran bleu des titres"> -->
-            <h2>L'histoire</h2>
+            <h2 class="title_anim">L'histoire</h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
@@ -74,7 +74,7 @@ get_header();
 
 
         <section id="studio">
-            <h2 class="title_anim">Studio Koukaki</h2>
+            <h2>Studio Koukaki</h2>
             <!-- <img class="background_studio" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_studio.png'; ?> " alt="arrière plan bleu du titre de la section Story"> -->
             <div>
                 <p>Acteur majeur de l'animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>

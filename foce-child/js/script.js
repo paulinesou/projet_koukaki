@@ -7,15 +7,30 @@ const stopLogo = logo.offsetTop;
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
-    background.style.top = value * 2 + 'px';
-    logo.style.marginTop = value * 0.5 + 'px';
+   //  background.style.top = value * 1.5 + 'px';
+   //  logo.style.top = value * 0.5 + 'px';
 
-   if(scrollTop = (scrollTop + stopLogo).toFixed() - clientHeight * 0.5){
-      logo.style.bottom = value * 0.5 + 'px';
-   }
-
-   if(scrollTop = 100)
+//     if(value > 150){
+//    logo.style.bottom = value * 0.5 + 'px';
+//     }
 });
+
+// window.onscroll = function() {myFunction()};
+ 
+// function myFunction() {
+// var x = document.body.scrollTop || document.documentElement.scrollTop;
+// var h = document.getElementById("logo").offsetHeight;
+// var b = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+ 
+// if (x > 100 && h < b) 
+// {
+// document.getElementById("logo").className = "fixed";
+// }
+// else
+// {
+// document.getElementById("logo").className = "";
+// }
+// }
 
 // Apparition des titre h2 au scroll
 
@@ -76,4 +91,21 @@ window.addEventListener('scroll', () => {
     }
  });
 
+// Menu burger
 
+const menuBurger = document.getElementById("menu_burger");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+openBtn.onclick = openNav;
+closeBtn.onclick = closeNav;
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+   menuBurger.classList.add("active");
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+   menuBurger.classList.remove("active");
+}
