@@ -32,7 +32,7 @@ window.addEventListener('scroll', () => {
 // }
 // }
 
-// Apparition des titre h2 au scroll
+// Apparition des titre au scroll
 
 const ratio = .5
 const options = {
@@ -43,9 +43,11 @@ const options = {
 
 const handleIntersect = function (entries, observer) {
    entries.forEach(function(entry) {
+      console.log("hello")
       if (entry.intersectionRatio > ratio) {
          entry.target.classList.add("active")
          observer.unobserve(entry.target)
+         
       }
    })
 }

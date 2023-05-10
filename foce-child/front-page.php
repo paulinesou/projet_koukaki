@@ -31,7 +31,7 @@ get_header();
             ?>
             <article id="characters">
                 <div class="main-character">
-                    <h3 class="title_perso">Les personnages</h3>
+                    <h3 class="title_perso title_anim">Les personnages</h3>
                     <!-- Insertion de mon template personnage avec le caroussel swiper -->
                     <?php get_template_part( '/templates/section_personnages' ); ?>
 
@@ -62,7 +62,7 @@ get_header();
             </article>
             <article id="place">
                 <div>
-                    <h3>Le Lieu</h3>
+                    <h3 class="title_anim">Le Lieu</h3>
                     <img class="big_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?> " alt="image d'un gros nuage">
                     <img class="little_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?> " alt="image d'un petit nuage">
                     <p><?php echo get_theme_mod('place'); ?></p>
@@ -74,7 +74,7 @@ get_header();
 
 
         <section id="studio">
-            <h2>Studio Koukaki</h2>
+            <h2 class="title_anim">Studio Koukaki</h2>
             <!-- <img class="background_studio" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_studio.png'; ?> " alt="arrière plan bleu du titre de la section Story"> -->
             <div>
                 <p>Acteur majeur de l'animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
