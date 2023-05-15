@@ -92,7 +92,7 @@
 }
 
 /* Animation titres */
-.background_studio{
+/* .background_studio{
 	position: absolute;
 	left: 440px;
 	top: 20px;
@@ -108,7 +108,7 @@
 	transform: translateY(0);
 	transition: 1s;
 	top: 100px;
-}
+} */
 
 /* #studio h2{
 	background-image: none;
@@ -232,9 +232,9 @@
   
 /* Sidenav menu links */
 .nav_burger a {
-	padding: 8px 8px 8px 32px;
+	/* padding: 8px 8px 8px 32px; */
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 40px;
 	color: black;
 	display: block;
 	transition: 0.3s;
@@ -247,8 +247,7 @@
   
 .nav_burger ul {
 	list-style-type: none;
-	padding: 0;
-	margin: 0;
+	/* padding-top: 130px; */
 	flex-direction: column;
 	background-color: white;
 }
@@ -289,4 +288,12 @@
 	z-index: 2;
 }
 
+.logo_burger{
+	filter: drop-shadow(0px 0px 26.0937px rgba(255, 92, 0, 0.6));
+	margin-top: 50px
+}
+
+.nav_burger li{
+	margin: 20px;
+}
 
