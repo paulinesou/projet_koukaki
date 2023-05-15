@@ -76,11 +76,6 @@
     animation : flowerTurn 12s linear infinite;
     /* transform-origin: ; */
 }
-
-.story h2::after{
-	animation : flowerTurn 12s linear infinite;
-	/* content: url(assets/images/sunflower.png); */
-}
     
 @keyframes flowerTurn {
     from {
@@ -91,14 +86,78 @@
     }
 }
 
-/* Animation titres */
-/* .background_studio{
+/* Animation des titres */
+
+h2{
+	background: none;
+}
+
+/* SECTION HISTOIRE */
+.title_story{
 	position: absolute;
-	left: 440px;
+	top: 0;
+}
+
+.background_story{
+	position: relative;
 	top: 20px;
 }
 
-.title_anim {
+/* Supression tige + feuille section Histoire */
+.story h2::before{
+	display: none;
+}
+
+/* Ajout manuel de l'image de la tige + feuille */
+.feuille_story{
+	position: absolute;
+	left: 0;
+	top: 110px;
+}
+
+/* Suppression de la fleur section Histoire */
+.story h2::after{
+	left: -6.8em;
+	display: none;
+}
+
+/* Ajout manuel de l'image de la fleur section Histoire */
+.fleur_story{
+	position: absolute;
+	left: 43px;
+	top: 28em;
+	animation : flowerTurn 12s linear infinite;
+}
+
+/* SECTION PERSONNAGE */
+.story #characters h3{
+	background-image: none;
+	position: relative;
+	margin-top: 30px;
+}
+
+.background_perso{
+	position: absolute;
+	left: -15px;
+	margin-top: 30px;
+}
+
+/* SECTION LIEU */
+.story #place h3{
+	background-image: none;
+	position: relative;
+}
+
+.background_lieu{
+	position: absolute;
+	bottom: 329px;
+	left: 95px;
+}
+
+/* SECTION STUDIO */
+
+/* Partie animation */
+/* .title_anim {
 	opacity: 0;
 	transform: translateY(-30px);
 }
@@ -107,16 +166,11 @@
 	opacity:1;
 	transform: translateY(0);
 	transition: 1s;
-	top: 100px;
 } */
-
-/* #studio h2{
-	background-image: none;
-}
 
 /* Vidéo hero */
 
-/* Section Lieu */
+/* Animation des nuages section Lieu */
 .story #place{
 	background-image: url("./assets/images/studio_koukaki_place.png");
 }
@@ -125,7 +179,7 @@
 	filter: blur(10px);
 	position: absolute;
 	left: 730px;
-	top: 1330px;
+	top: 1290px;
 	transform: translateX(-100%);
     opacity: 1;
     transition: transform 3s ease-in-out;
@@ -136,7 +190,7 @@
 	filter: blur(10px);
 	position: absolute;
 	left: 500px;
-	top: 1500px;
+	top: 1435px;
 	transform: translateX(-100%);
     opacity: 1;
     transition: transform 3s ease-in-out;
@@ -153,7 +207,7 @@
     opacity: 1;
 }
 
-/* Section oscars */
+/* Ajout de la section oscars */
 .site-footer::after{
 	bottom: 28.8em;
 }
@@ -186,7 +240,7 @@
 	object-fit: contain;
 }
 
-/* Swiper section personnage */
+/* Swiper / Carrousel section personnage */
 .swiper {
 	width: 100%;
 	padding-top: 50px;
@@ -215,7 +269,7 @@
 	background-position-x: 30px;
 }
 
-/* Menu burger */
+/* Ajout du menu burger */
 /* Sidenav menu */
 .nav_burger {
 	height: 100%;
