@@ -111,3 +111,24 @@ function openNav() {
 function closeNav() {
    menuBurger.classList.remove("active");
 }
+
+const ulMenu = document.querySelector(".burger");
+
+document.querySelectorAll(".lien_burger").forEach(n => n.addEventListener("click", () => {
+   menuBurger.classList.remove("active");
+ }));
+
+// document.getElementById("lien_burger").addEventListener("click", function(event){
+//    event.preventDefault()
+//  });
+
+// const lienBurger = document.getElementsByClassName("lien_burger")
+
+// lienBurger.addEventListener('click', function(closeNav) {
+//    closeNav.preventDefault()
+//    burger.classList.toggle('open')
+//    ul.classList.toggle('open')
+//    menuBurger.classList.toggle("open")
+//  })
+
+

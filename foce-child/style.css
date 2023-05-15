@@ -232,7 +232,7 @@
   
 /* Sidenav menu links */
 .nav_burger a {
-	/* padding: 8px 8px 8px 32px; */
+	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 40px;
 	color: black;
@@ -247,7 +247,6 @@
   
 .nav_burger ul {
 	list-style-type: none;
-	/* padding-top: 130px; */
 	flex-direction: column;
 	background-color: white;
 }
@@ -258,13 +257,15 @@
 	width: 100%;
 	text-align: center;
 	padding-top: 80px;
+	animation: down 1s;
+	transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
   
 /* Close btn */
 .nav_burger .close {
 	position: absolute;
 	top: 0px;
-	right: 20px;
+	right: 65px;
 	font-size: 36px;
 	color: black;
 }
@@ -293,7 +294,14 @@
 	margin-top: 50px
 }
 
-.nav_burger li{
-	margin: 20px;
+.story_burger::after{
+	content: url(assets/images/chat_bleu_burger.png);
+	position: absolute;
+	left: -250px;
+	top: -40px;
 }
 
+/* .story_burger::before{
+	content: url(assets/images/sunflower_burger.png);
+	position: absolute;
+} */
