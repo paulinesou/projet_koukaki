@@ -54,6 +54,10 @@
 }
 
 /* section histoire et studio */
+.story__article p{
+	animation: down 1s;
+}
+
 #story, #studio{
     animation: up 1s;
 }
@@ -190,7 +194,7 @@
 
 /* ANIMATION DES TITRES - APPARITION AU SCROLL */
 
-/* .title_anim {
+.title_anim {
 	opacity: 0;
 	transform: translateY(-30px);
 }
@@ -199,7 +203,7 @@
 	opacity:1;
 	transform: translateY(0);
 	transition: 1s;
-} */
+}
 
 /* ANIMATION DES NUAGES SECTION LIEU */
 
@@ -212,8 +216,8 @@
 .big_cloud{
 	filter: blur(10px);
 	position: absolute;
-	left: 730px;
-	top: 1290px;
+	left: 1320px;
+	top: 1270px;
 	transform: translateX(-100%);
     opacity: 1;
     transition: transform 3s ease-in-out;
@@ -224,8 +228,8 @@
 .little_cloud{
 	filter: blur(10px);
 	position: absolute;
-	left: 500px;
-	top: 1435px;
+	left: 940px;
+	top: 1450px;
 	transform: translateX(-100%);
     opacity: 1;
     transition: transform 3s ease-in-out;
@@ -234,12 +238,12 @@
 
 /* animation des nuages */
 .big_cloud.active {
-    transform: translateX(100%);
+    transform: translateX(-190%);
     opacity: 1;
 }
 
 .little_cloud.active {
-    transform: translateX(170%);
+    transform: translateX(-260%);
     opacity: 1;
 }
 

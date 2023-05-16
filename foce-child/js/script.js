@@ -1,4 +1,4 @@
-// Parallaxe entre le background/video et le titre (logo)
+// EFFET PARALLAXE ENTRE LE BACKGROUND/VIDEO ET LE TITRE
 
 const background = document.getElementById('background_header');
 const logo = document.getElementById('logo');
@@ -32,30 +32,26 @@ window.addEventListener('scroll', () => {
 // }
 // }
 
-// Apparition des titre au scroll
+// APPARITION DES TITRES AU SCROLL
 
-const ratio = .5
-const options = {
-   root: null,
-   rootMargin:'0px',
-   threshold: ratio
+const targets = document.querySelectorAll('.title_anim');
+
+function handleIntersection(entries) {
+    entries.map((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active')
+        } else {
+            entry.target.classList.remove('active')
+        }
+    });
 }
 
-const handleIntersect = function (entries, observer) {
-   entries.forEach(function(entry) {
-      console.log("hello")
-      if (entry.intersectionRatio > ratio) {
-         entry.target.classList.add("active")
-         observer.unobserve(entry.target)
-         
-      }
-   })
-}
+const observer = new IntersectionObserver(handleIntersection);
 
-const observeur = new IntersectionObserver(handleIntersect, options)
-observeur.observe(document.querySelector(".title_anim"))
+targets.forEach(target => observer.observe(target));
 
-// Mouvement des nuages au scroll section lieu
+
+// MOUVEMENT DES NUAGES AU SCROLL
 
 const bigCloud = document.querySelector('.big_cloud');
 const littleCloud = document.querySelector('.little_cloud');
@@ -76,7 +72,7 @@ window.addEventListener('scroll', () => {
 
 });
 
-// Swiper section personnage 
+// CAROUSSEL - SWIPER 
 
   var swiper = new Swiper('.mySwiper', {
     pagination: '.swiper-pagination',
@@ -85,15 +81,16 @@ window.addEventListener('scroll', () => {
     centeredSlides: true,
     slidesPerView: 'auto',
     coverflow: {
- rotate: 50,
+ rotate: 20,
  stretch: 0,
- depth: 100,
+ depth: 200,
  modifier: 1,
  slideShadows: false,
-    }
+    },
+   //  loop: true,
  });
 
-// Menu burger
+// MENU BURGER
 
 const menuBurger = document.getElementById("menu_burger");
 const openBtn = document.getElementById("openBtn");
@@ -102,12 +99,10 @@ const closeBtn = document.getElementById("closeBtn");
 openBtn.onclick = openNav;
 closeBtn.onclick = closeNav;
 
-/* Set the width of the side navigation to 250px */
 function openNav() {
    menuBurger.classList.add("active");
 }
 
-/* Set the width of the side navigation to 0 */
 function closeNav() {
    menuBurger.classList.remove("active");
 }
