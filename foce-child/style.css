@@ -335,7 +335,8 @@
 	transition: 0.3s;
 	text-align: center;
 }
-  
+
+/* effet au survol des liens */
 .nav_burger ul a:hover {
 	text-shadow: 0px 0px 14px #FF5C00;
 }
@@ -381,6 +382,7 @@
 	z-index: 2;
 }
 
+/* ajout des éléments visuels du menu burger */
 .logo_burger{
 	filter: drop-shadow(0px 0px 26.0937px rgba(255, 92, 0, 0.6));
 	margin-top: 50px
@@ -389,11 +391,60 @@
 .story_burger::after{
 	content: url(assets/images/chat_bleu_burger.png);
 	position: absolute;
-	left: -250px;
+	left: -280px;
 	top: -40px;
 }
 
-/* .story_burger::before{
+.story_burger::before{
 	content: url(assets/images/sunflower_burger.png);
 	position: absolute;
-} */
+	left: 400px;
+	top: -100px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.personnage_burger::before{
+	content: url(assets/images/orchid.png);
+	position: absolute;
+	left: -690px;
+	top: -140px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.personnage_burger::after{
+	content: url(assets/images/random_flower_studio.png);
+	position: absolute;
+	left: 860px;
+	top: 0;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.lieu_burger::before{
+	content: url(assets/images/flower_burger.png);
+	position: absolute;
+	left: -490px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.lieu_burger::after{
+	content: url(assets/images/chat_gris_burger.png);
+	position: absolute;
+	left: 430px;
+	top: 0;
+}
+
+.studio_burger::before{
+	content: url(assets/images/chat_roux_burger.png);
+	position: absolute;
+	left: -500px;
+	top: 50px;
+
+}
+
+.studio_burger::after{
+	content: url(assets/images/hibiscus.png);
+	position: absolute;
+	left: 720px;
+	top: -30px;
+	animation : flowerTurn 12s linear infinite;
+}
