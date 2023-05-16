@@ -8,7 +8,9 @@
  Version: 0.1
  */
 
-/* Animation fade in */
+/* ANIMATION FADE IN DES DIFFERENTES SECTION */
+
+/* section header */
  .banner{
 	position: relative;
 	display: flex;
@@ -51,6 +53,7 @@
 	/* transform: translate3d(0, -20%, 0); */
 }
 
+/* section histoire et studio */
 #story, #studio{
     animation: up 1s;
 }
@@ -66,15 +69,13 @@
 	}
 }
 
-/* Animation fleurs */
+/* ROTATION DES FLEURS - SECTION HISTOIRE ET FOOTER */
+
 .story__article::after,
-#studio h2::before,
-#studio h2::after,
 .site-footer::before,
 .site-footer::after,
 .site-footer ul::after {
     animation : flowerTurn 12s linear infinite;
-    /* transform-origin: ; */
 }
     
 @keyframes flowerTurn {
@@ -86,42 +87,37 @@
     }
 }
 
-/* Animation des titres */
+/* AJOUT DE LA VIDEO DU HEADER */
 
-h2{
-	background: none;
-}
 
-/* SECTION HISTOIRE */
+/* ANIMATION DES TITRES - RESTRUCTURATION HTML */
+
+/* section histoire */
+/* suppression du background */
 .title_story{
+	background: none;
 	position: absolute;
 	top: 0;
 }
 
+/* ajout manuel de l'image en background */
 .background_story{
 	position: relative;
 	top: 20px;
 }
 
-/* Supression tige + feuille section Histoire */
-.story h2::before{
+/* supression tige + feuille et fleur */
+.story h2::before, .story h2::after{
 	display: none;
 }
 
-/* Ajout manuel de l'image de la tige + feuille */
+/* ajout manuel de la tige + feuille et fleur */
 .feuille_story{
 	position: absolute;
 	left: 0;
 	top: 110px;
 }
 
-/* Suppression de la fleur section Histoire */
-.story h2::after{
-	left: -6.8em;
-	display: none;
-}
-
-/* Ajout manuel de l'image de la fleur section Histoire */
 .fleur_story{
 	position: absolute;
 	left: 43px;
@@ -129,34 +125,71 @@ h2{
 	animation : flowerTurn 12s linear infinite;
 }
 
-/* SECTION PERSONNAGE */
+/* section personnage */
+/* suppression du background */
 .story #characters h3{
 	background-image: none;
 	position: relative;
 	margin-top: 30px;
 }
 
+/* ajout manuel de l'image en background */
 .background_perso{
 	position: absolute;
 	left: -15px;
 	margin-top: 30px;
 }
 
-/* SECTION LIEU */
+/* section lieu */
+/* suppression du background */
 .story #place h3{
 	background-image: none;
 	position: relative;
 }
 
+/* ajout manuel de l'image en background */
 .background_lieu{
 	position: absolute;
 	bottom: 329px;
 	left: 95px;
 }
 
-/* SECTION STUDIO */
+/* section studio */
+/* suppression du background */
+#studio h2{
+	background: none;
+	position: absolute;
+	right: 375px;
+	top: -23px;
+}
 
-/* Partie animation */
+/* ajout manuel de l'image en background */
+.background_studio{
+	position: absolute;
+	right: 440px;
+	top: 0;
+}
+
+/* suppression des fleurs */
+#studio h2::before, #studio h2::after{
+	display: none;
+}
+
+/* ajout manuel des fleurs */
+.left_flower_studio{
+	margin-left: -115px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.right_flower_studio{
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+/* ANIMATION DES TITRES - APPARITION AU SCROLL */
+
 /* .title_anim {
 	opacity: 0;
 	transform: translateY(-30px);
@@ -168,13 +201,14 @@ h2{
 	transition: 1s;
 } */
 
-/* Vidéo hero */
+/* ANIMATION DES NUAGES SECTION LIEU */
 
-/* Animation des nuages section Lieu */
+/* ajout de l'image en fond */
 .story #place{
 	background-image: url("./assets/images/studio_koukaki_place.png");
 }
 
+/* ajout de l'image du grand nuage */
 .big_cloud{
 	filter: blur(10px);
 	position: absolute;
@@ -186,6 +220,7 @@ h2{
     opacity: 0.4s ease-in-out;
 }
 
+/* ajout de l'image du petit nuage */
 .little_cloud{
 	filter: blur(10px);
 	position: absolute;
@@ -197,6 +232,7 @@ h2{
     opacity: 0.4s ease-in-out;
 }
 
+/* animation des nuages */
 .big_cloud.active {
     transform: translateX(100%);
     opacity: 1;
@@ -207,7 +243,8 @@ h2{
     opacity: 1;
 }
 
-/* Ajout de la section oscars */
+/* AJOUT DE LA SECTION OSCARS */
+
 .site-footer::after{
 	bottom: 28.8em;
 }
@@ -240,7 +277,8 @@ h2{
 	object-fit: contain;
 }
 
-/* Swiper / Carrousel section personnage */
+/* AJOUT DE MON CARROUSEL / SWIPER - SECTION PERSONNAGE */
+
 .swiper {
 	width: 100%;
 	padding-top: 50px;
@@ -269,8 +307,8 @@ h2{
 	background-position-x: 30px;
 }
 
-/* Ajout du menu burger */
-/* Sidenav menu */
+/* AJOUT DE MON MENU BURGER */
+
 .nav_burger {
 	height: 100%;
 	width: 250px;
@@ -284,7 +322,6 @@ h2{
 	overflow: hidden;
 }
   
-/* Sidenav menu links */
 .nav_burger a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
@@ -305,7 +342,6 @@ h2{
 	background-color: white;
 }
   
-/* Active class */
 .nav_burger.active {
 	left: 0;
 	width: 100%;
@@ -315,7 +351,6 @@ h2{
 	transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
   
-/* Close btn */
 .nav_burger .close {
 	position: absolute;
 	top: 0px;
@@ -324,7 +359,6 @@ h2{
 	color: black;
 }
   
-/* Icône burger */
 .burger-icon span {
 	display: block;
 	width: 35px;

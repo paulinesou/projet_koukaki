@@ -46,6 +46,7 @@
                 <!-- <li><a href="#place">Lieu</a></li>
                 <li><a href="#studio">Studio Koukaki</a></li> -->
             </ul>
+            <!-- Integration de mon template menu burger -->
             <?php get_template_part( '/templates/menu_burger' ); ?>
 
 		</nav> <!--#site-navigation-->

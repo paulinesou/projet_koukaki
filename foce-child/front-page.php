@@ -74,6 +74,7 @@ get_header();
                     <!-- Ajout de mon background de titre section Lieu -->
                     <img class="background_lieu" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_lieu.png'; ?> " alt="fond d'écran orange du titre de la section Lieu">
                     <h3 class="title_lieu title_anim">Le Lieu</h3>
+                    <!-- Ajout de mes deux images de nuages -->
                     <img class="big_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?> " alt="image d'un gros nuage">
                     <img class="little_cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?> " alt="image d'un petit nuage">
                     <p><?php echo get_theme_mod('place'); ?></p>
@@ -85,8 +86,12 @@ get_header();
 
 
         <section id="studio">
+            <!-- Ajout de mon background de titre de section Studio -->
+            <img class="background_studio" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_studio.png'; ?> " alt="arrière plan bleu du titre de la section Story">
             <h2 class="title_studio title_anim">Studio Koukaki</h2>
-            <!-- <img class="background_studio" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_studio.png'; ?> " alt="arrière plan bleu du titre de la section Story"> -->
+            <!-- Ajout des deux images de fleurs section Studio-->
+            <img class="left_flower_studio" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/random_flower_studio.png'; ?> " alt="image d'une fleur violette">
+            <img class="right_flower_studio" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/flower_studio.png'; ?> " alt="image d'une fleur orange">
             <div>
                 <p>Acteur majeur de l'animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
                 <p>Avec une créativité et une capacité d'innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d'oranger et chats errants”.</p>
