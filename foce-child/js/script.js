@@ -81,9 +81,9 @@ window.addEventListener('scroll', () => {
     centeredSlides: true,
     slidesPerView: 'auto',
     coverflow: {
- rotate: 20,
+ rotate: 50,
  stretch: 0,
- depth: 200,
+ depth: 100,
  modifier: 1,
  slideShadows: false,
     },

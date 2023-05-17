@@ -202,7 +202,7 @@
 .title_anim.active{
 	opacity:1;
 	transform: translateY(0);
-	transition: 1s;
+	transition: 1.5s;
 }
 
 /* ANIMATION DES NUAGES SECTION LIEU */
@@ -327,9 +327,9 @@
 }
   
 .nav_burger a {
-	padding: 8px 8px 8px 32px;
+	/* padding: 8px 8px 8px 32px; */
 	text-decoration: none;
-	font-size: 40px;
+	font-size: 38px;
 	color: black;
 	display: block;
 	transition: 0.3s;
@@ -382,13 +382,74 @@
 	z-index: 2;
 }
 
-/* ajout des éléments visuels du menu burger */
-.logo_burger{
-	filter: drop-shadow(0px 0px 26.0937px rgba(255, 92, 0, 0.6));
-	margin-top: 50px
+.nav_burger ul li{
+	top: 5px;
 }
 
-.story_burger::after{
+/* animation des liens du menu burger */
+
+
+/* ajout des éléments visuels du menu burger */
+.logo_burger{
+	position: relative;
+	top: 5px;
+	filter: drop-shadow(0px 0px 26.0937px rgba(255, 92, 0, 0.6));
+}
+
+.orchid_burger{
+	position: absolute;
+	left: -55px;
+	top: 120px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.chat_bleu_burger{
+	position: absolute;
+	left: 360px;
+	top: 180px;
+}
+
+.marguerite_burger{
+	position: absolute;
+	top: 135px;
+	right: 300px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.random_flower_burger{
+	position: absolute;
+	top: 357px;
+	right: -45px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.flower_burger{
+	position: absolute;
+	top: 420px;
+	left: 300px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+.chat_gris_burger{
+	position: absolute;
+	top: 430px;
+	right: 390px;
+}
+
+.chat_roux_burger{
+	position: absolute;
+	top: 620px;
+	left: 130px;
+}
+
+.hibiscus{
+	position: absolute;
+	bottom: -240px;
+	right: -225px;
+	animation : flowerTurn 12s linear infinite;
+}
+
+/* .story_burger::after{
 	content: url(assets/images/chat_bleu_burger.png);
 	position: absolute;
 	left: -280px;
@@ -412,7 +473,7 @@
 }
 
 .personnage_burger::after{
-	content: url(assets/images/random_flower_studio.png);
+	content: url(assets/images/random_flower_burger.png);
 	position: absolute;
 	left: 860px;
 	top: 0;
@@ -447,4 +508,4 @@
 	left: 720px;
 	top: -30px;
 	animation : flowerTurn 12s linear infinite;
-}
+} */
