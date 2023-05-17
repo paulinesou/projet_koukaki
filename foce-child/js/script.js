@@ -1,36 +1,31 @@
 // EFFET PARALLAXE ENTRE LE BACKGROUND/VIDEO ET LE TITRE
 
-const background = document.getElementById('background_header');
+// const background = document.getElementById('background_header');
 const logo = document.getElementById('logo');
-const stopLogo = logo.offsetTop;
 
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
    //  background.style.top = value * 1.5 + 'px';
    //  logo.style.top = value * 0.5 + 'px';
-
-//     if(value > 150){
-//    logo.style.bottom = value * 0.5 + 'px';
-//     }
 });
 
-// window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction()};
  
-// function myFunction() {
-// var x = document.body.scrollTop || document.documentElement.scrollTop;
-// var h = document.getElementById("logo").offsetHeight;
-// var b = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+function myFunction() {
+var x = document.body.scrollTop || document.documentElement.scrollTop;
+var h = document.getElementById("logo").offsetHeight;
+var b = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
  
-// if (x > 100 && h < b) 
-// {
-// document.getElementById("logo").className = "fixed";
-// }
-// else
-// {
-// document.getElementById("logo").className = "";
-// }
-// }
+if (x > 560 && h < b) 
+{
+document.getElementById("logo").className = "fixed";
+}
+else
+{
+document.getElementById("logo").className = "";
+}
+}
 
 // APPARITION DES TITRES AU SCROLL
 

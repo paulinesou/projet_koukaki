@@ -49,8 +49,8 @@
     animation : up 1s;
 }
 
-#logo, .fixed{
-	/* transform: translate3d(0, -20%, 0); */
+#logo.fixed{
+	
 }
 
 /* section histoire et studio */
