@@ -12,16 +12,17 @@
 
 /* section header */
  .banner{
-	position: relative;
+	/* position: relative; */
 	display: flex;
-	background: white;
     animation: down 1s;
+	background-image:url(assets/images/banner.png)
+
 }
 
-.banner img{
+/* .banner img{
 	margin: auto;
 	width: auto;
-}
+} */
 
 @keyframes down{
 	from {
@@ -35,13 +36,13 @@
 }
 
 #background_header{
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-attachment:fixed;
 }
 
 #logo{
-	position: absolute;
+	position: sticky;
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -50,7 +51,7 @@
 }
 
 #logo.fixed{
-	opacity: 0;
+	
 }
 
 /* section histoire et studio */
@@ -93,6 +94,16 @@
 
 /* AJOUT DE LA VIDEO DU HEADER */
 
+#background_video{
+	position: absolute;
+}
+
+/* reglage video uniquement sur pc et tablette */
+@media screen and (max-width: 768px) {
+	#background_video{
+		display: none;
+	}
+}
 
 /* ANIMATION DES TITRES - RESTRUCTURATION HTML */
 

@@ -1,14 +1,12 @@
 // EFFET PARALLAXE ENTRE LE BACKGROUND/VIDEO ET LE TITRE
 
-// const background = document.getElementById('background_header');
-const logo = document.getElementById('logo');
+// const logo = document.getElementById('logo');
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
+// window.addEventListener('scroll', () => {
+//     let value = window.scrollY;
 
-   //  background.style.top = value * 1.5 + 'px';
-   //  logo.style.top = value * 0.5 + 'px';
-});
+//     logo.style.top = value * 0.5 + 'px';
+// });
 
 window.onscroll = function() {myFunction()};
  

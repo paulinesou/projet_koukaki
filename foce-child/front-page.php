@@ -5,17 +5,18 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-            <!-- <video id="background_video" autoplay loop muted> 
+            <!-- Ajout de la vidéo en background du header -->
+            <video id="background_video" autoplay loop muted> 
                 <source src="<?php echo get_stylesheet_directory_uri() . '/assets/medias/studio_koukaki_video.mp4'; ?> " type="video/mp4">
-            </video> -->
-            <!-- Ajout de mon background du header -->
-            <img id="background_header" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/banner.png'; ?> " alt="fond d'écran chat">
+            </video>
+            <!-- Ajout de l'image en background du header -->
+            <!-- <img id="background_header" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/banner.png'; ?> " alt="fond d'écran chat"> -->
             <div id="logo">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img class="logo_header" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             </div>
         </section>
         <section id="story" class="story">
-            <!-- Ajout de mon background de titre section Histoire -->
+            <!-- Ajout du background de titre section Histoire -->
             <img class="background_story" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/background_story.png'; ?> " alt="fond d'écran bleu du titre de la section Histoire">
             <h2 class="title_story title_anim">L'histoire</h2>
             <!-- Ajout de l'image de fleur + tige section Histoire -->
