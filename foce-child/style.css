@@ -50,7 +50,7 @@
 }
 
 #logo.fixed{
-	
+	opacity: 0;
 }
 
 /* section histoire et studio */
@@ -97,11 +97,23 @@
 /* ANIMATION DES TITRES - RESTRUCTURATION HTML */
 
 /* section histoire */
+#story{
+	padding-top: 50px;
+}
+
+.story__article::before{
+	top: 12em;
+}
+
+.story__article::after{
+	top: 5em;
+}
+
 /* suppression du background */
 .title_story{
 	background: none;
 	position: absolute;
-	top: 0;
+	top: 40;
 }
 
 /* ajout manuel de l'image en background */
@@ -119,7 +131,7 @@
 .feuille_story{
 	position: absolute;
 	left: 0;
-	top: 110px;
+	top: 150px;
 }
 
 .fleur_story{
@@ -134,14 +146,14 @@
 .story #characters h3{
 	background-image: none;
 	position: relative;
-	margin-top: 30px;
+	margin-top: 65px;
 }
 
 /* ajout manuel de l'image en background */
 .background_perso{
 	position: absolute;
 	left: -15px;
-	margin-top: 30px;
+	margin-top: 65px;
 }
 
 /* section lieu */
@@ -164,14 +176,14 @@
 	background: none;
 	position: absolute;
 	right: 375px;
-	top: -23px;
+	top: 25px;
 }
 
 /* ajout manuel de l'image en background */
 .background_studio{
 	position: absolute;
 	right: 440px;
-	top: 0;
+	top: 45px;
 }
 
 /* suppression des fleurs */
@@ -188,8 +200,12 @@
 .right_flower_studio{
 	position: absolute;
 	right: 50px;
-	top: 50px;
+	top: 95px;
 	animation : flowerTurn 12s linear infinite;
+}
+
+#studio{
+	padding-top: 75px;
 }
 
 /* ANIMATION DES TITRES - APPARITION AU SCROLL */
@@ -202,7 +218,7 @@
 .title_anim.active{
 	opacity:1;
 	transform: translateY(0);
-	transition: 1.5s;
+	transition: 1.7s;
 }
 
 /* ANIMATION DES NUAGES SECTION LIEU */
@@ -217,7 +233,7 @@
 	filter: blur(10px);
 	position: absolute;
 	left: 1320px;
-	top: 1270px;
+	top: 1360px;
 	transform: translateX(-100%);
     opacity: 1;
     transition: transform 3s ease-in-out;
@@ -229,7 +245,7 @@
 	filter: blur(10px);
 	position: absolute;
 	left: 940px;
-	top: 1450px;
+	top: 1510px;
 	transform: translateX(-100%);
     opacity: 1;
     transition: transform 3s ease-in-out;
@@ -315,19 +331,33 @@
 
 .nav_burger {
 	height: 100%;
-	width: 250px;
+	width: 100%;
+	/* width: 250px; */
 	position: fixed;
 	z-index: 1;
-	top: 0;
-	left: -250px;
+	/* top: 0; */
+	top : -100%;
+	/* left: -250px; */
 	background-color: #FFD5A2;
 	padding-top: 60px;
-	transition: left 0.5s ease;
+	transition: all 1s ease;
+	animation: upMenu 1s;
 	overflow: hidden;
+}
+
+/* animation de fermeture du menu burger */
+@keyframes upMenu{
+	from {
+		opacity: 1;
+		transform: translate3d(0, 20%, 0);
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
 }
   
 .nav_burger a {
-	/* padding: 8px 8px 8px 32px; */
 	text-decoration: none;
 	font-size: 38px;
 	color: black;
@@ -336,7 +366,6 @@
 	text-align: center;
 }
 
-/* effet au survol des liens */
 .nav_burger ul a:hover {
 	text-shadow: 0px 0px 14px #FF5C00;
 }
@@ -348,7 +377,7 @@
 }
   
 .nav_burger.active {
-	left: 0;
+	top: 0;
 	width: 100%;
 	text-align: center;
 	padding-top: 80px;
@@ -386,9 +415,6 @@
 	top: 5px;
 }
 
-/* animation des liens du menu burger */
-
-
 /* ajout des éléments visuels du menu burger */
 .logo_burger{
 	position: relative;
@@ -407,6 +433,7 @@
 	position: absolute;
 	left: 360px;
 	top: 180px;
+	animation: floatCat 6s ease-in-out 0s infinite;
 }
 
 .marguerite_burger{
@@ -434,12 +461,14 @@
 	position: absolute;
 	top: 430px;
 	right: 390px;
+	animation: floatCat 6s ease-in-out 0s infinite;
 }
 
 .chat_roux_burger{
 	position: absolute;
 	top: 620px;
 	left: 130px;
+	animation: floatCat 6s ease-in-out 0s infinite;
 }
 
 .hibiscus{
@@ -449,63 +478,16 @@
 	animation : flowerTurn 12s linear infinite;
 }
 
-/* .story_burger::after{
-	content: url(assets/images/chat_bleu_burger.png);
-	position: absolute;
-	left: -280px;
-	top: -40px;
+/* ajout de l'effet de flottement des chats */
+
+@keyframes floatCat{
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100%{
+		transform: translateY(0);
+	}
 }
-
-.story_burger::before{
-	content: url(assets/images/sunflower_burger.png);
-	position: absolute;
-	left: 400px;
-	top: -100px;
-	animation : flowerTurn 12s linear infinite;
-}
-
-.personnage_burger::before{
-	content: url(assets/images/orchid.png);
-	position: absolute;
-	left: -690px;
-	top: -140px;
-	animation : flowerTurn 12s linear infinite;
-}
-
-.personnage_burger::after{
-	content: url(assets/images/random_flower_burger.png);
-	position: absolute;
-	left: 860px;
-	top: 0;
-	animation : flowerTurn 12s linear infinite;
-}
-
-.lieu_burger::before{
-	content: url(assets/images/flower_burger.png);
-	position: absolute;
-	left: -490px;
-	animation : flowerTurn 12s linear infinite;
-}
-
-.lieu_burger::after{
-	content: url(assets/images/chat_gris_burger.png);
-	position: absolute;
-	left: 430px;
-	top: 0;
-}
-
-.studio_burger::before{
-	content: url(assets/images/chat_roux_burger.png);
-	position: absolute;
-	left: -500px;
-	top: 50px;
-
-}
-
-.studio_burger::after{
-	content: url(assets/images/hibiscus.png);
-	position: absolute;
-	left: 720px;
-	top: -30px;
-	animation : flowerTurn 12s linear infinite;
-} */

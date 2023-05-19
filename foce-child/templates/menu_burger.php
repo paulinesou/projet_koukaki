@@ -13,7 +13,7 @@
     <img class="random_flower_burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/random_flower_burger.png'; ?> " alt="image d'une fleur">
     <!-- début de mes liens du menu -->
     <li class="story_burger title_anim"><a class="lien_burger" href="#story">Histoire</a></li>
-    <li class="personnage_burger title_anim"><a class="lien_burger" href="#characters">Personnages</a></li>
+    <li class=" title_anim"><a class="lien_burger" href="#characters">Personnages</a></li>
     <li class="lieu_burger title_anim"><a class="lien_burger" href="#place">Lieu</a></li>
     <li class="studio_burger title_anim"><a class="lien_burger" href="#studio">Studio Koukaki</a></li>
     <!-- ajout de l'image de la fleur orange -->

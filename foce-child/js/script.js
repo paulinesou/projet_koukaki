@@ -33,6 +33,7 @@ const targets = document.querySelectorAll('.title_anim');
 
 function handleIntersection(entries) {
     entries.map((entry) => {
+      entry.target.classList.remove('active')
         if (entry.isIntersecting) {
             entry.target.classList.add('active')
         } else {
